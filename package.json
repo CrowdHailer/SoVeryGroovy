@@ -1,0 +1,11 @@
+{
+  "name": "SoVeryGroovy",
+  "version": "0.0.0",
+  "description": "Convenient API for generating svg components",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "Peter Saxton",
+  "license": "MIT"
+}
