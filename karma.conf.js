@@ -6,7 +6,9 @@ module.exports = function(config) {
       'bower_components/cumin/dist/cumin.js',
       'src/prefix.js',
       'src/point.js',
-      'spec/point_spec.js'
+      'src/matrix.js',
+      'spec/point_spec.js',
+      'spec/matrix_spec.js'
     ],
     exclude: [
     ],
