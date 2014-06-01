@@ -6,4 +6,7 @@
     return darkSVG.createSVGMatrix();
   }
   parent.Matrix = create;
+  parent.Matrix.scaling = function(scalar){
+    return create().scale(scalar);
+  };
 }(SVGroovy));
