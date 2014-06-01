@@ -3,13 +3,12 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
+      'bower_components/cumin/dist/cumin.js',
       'src/prefix.js',
       'src/point.js',
       'spec/point_spec.js'
     ],
     exclude: [
-      'bower_components/hammer.fakemultitouch.js',
-      'bower_components/hammer.showtouches.js'
     ],
     reporters: ['spec'],
     port: 9876,

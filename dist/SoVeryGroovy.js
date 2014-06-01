@@ -1,3 +1,4 @@
+var SVGroovy = {};
 (function(parent){
   "use strict";
 
