@@ -45,9 +45,9 @@ describe('Point', function(){
 
     xit('should be imutable', function(){
       pt = Pt(2, 3);
-      console.log(Object.isFrozen(pt))
+      console.log(Object.isFrozen(pt));
       pt.x = 5;
-      console.log(pt)
+      console.log(pt);
       pt.y = 6;
       expect(pt.x).toEqual(2);
       expect(pt.y).toEqual(3);
