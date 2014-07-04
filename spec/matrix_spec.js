@@ -12,7 +12,7 @@ describe('Matrix', function(){
       expect(mx.a).toEqual(2);
     });
     it('should be possible to create a translating matrix', function(){
-      var mx = Mx.translating(2, 3);
+      var mx = Mx.toTranslate({x: 2, y: 3});
       expect(mx.a).toEqual(1);
       expect(mx.e).toEqual(2);
       expect(mx.f).toEqual(3);

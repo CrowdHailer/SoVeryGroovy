@@ -9,7 +9,7 @@
   parent.Matrix.toScale = function(scalar){
     return create().scale(scalar);
   };
-  parent.Matrix.translating = function(x, y){
-    return create().translate(x, y);
+  parent.Matrix.toTranslate = function(point){
+    return create().translate(point.x, point.y);
   };
 }(SVGroovy));
