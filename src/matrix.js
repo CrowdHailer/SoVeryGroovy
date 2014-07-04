@@ -6,7 +6,7 @@
     return darkSVG.createSVGMatrix();
   }
   parent.Matrix = create;
-  parent.Matrix.scaling = function(scalar){
+  parent.Matrix.toScale = function(scalar){
     return create().scale(scalar);
   };
   parent.Matrix.translating = function(x, y){
