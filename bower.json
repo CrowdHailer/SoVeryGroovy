@@ -13,6 +13,6 @@
     "spec"
   ],
   "dependencies": {
-    "cumin": "0.6.1"
+    "cumin": "0.8.0"
   }
 }
