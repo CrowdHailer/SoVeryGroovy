@@ -19,5 +19,17 @@
                 expect(mx.f).to.equal(3);
             });
         });
+
+        describe('String output', function () {
+            it('should create a css matrix string', function () {
+                var mx = Mx();
+                mx.b = 2;
+                mx.c = 3;
+                mx.d = 4;
+                mx.e = 5;
+                mx.f = 6;
+                expect(Mx.asCss(mx)).to.equal('matrix(1, 2, 3, 4, 5, 6)');
+            });
+        });
     });
 }());
