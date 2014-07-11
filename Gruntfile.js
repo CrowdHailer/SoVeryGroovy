@@ -77,11 +77,19 @@ module.exports = function(grunt) {
           subdomain: 'svgroovy',
           keepalive: true
         }
+      },
+      test: {
+        options: {
+          port: 9001,
+          subdomain: 'svgroovy',
+          keepalive: true
+        }
       }
     }
   });
 
   grunt.registerTask('default', ['karma', 'concat', 'uglify']);
   grunt.registerTask('test', ['connect:test', 'mocha']);
+  grunt.registerTask('deviceTest', ['connect:test', 'localtunnel:test']);
   grunt.registerTask('sandpit', ['connect:demo', 'localtunnel:debug']);
 };
