@@ -13,7 +13,6 @@
     "spec"
   ],
   "dependencies": {
-    "cumin": "0.8.1",
-    "ladybird": "~0.1.0"
+    "cumin": "0.8.1"
   }
 }
