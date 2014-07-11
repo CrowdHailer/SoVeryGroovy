@@ -50,6 +50,13 @@ module.exports = function(grunt) {
             ];
           }
         }
+      },
+      demo: {
+        options: {
+          open: false,
+          port: 9000,
+          base: ['bower_components', 'src', 'debug']
+        }
       }
     },
 
