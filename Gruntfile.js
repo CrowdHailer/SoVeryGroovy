@@ -1,4 +1,7 @@
 module.exports = function(grunt) {
+  'use strict';
+
+  require('load-grunt-tasks')(grunt);
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
@@ -31,8 +34,5 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default', ['karma', 'concat', 'uglify']);
 };
