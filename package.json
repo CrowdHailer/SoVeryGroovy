@@ -10,13 +10,16 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "0.4.x",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-uglify": "0.5.0",
+    "grunt-karma": "0.8.3",
+    "grunt-localtunnel-me": "^0.1.5",
+    "grunt-mocha": "^0.4.11",
+    "karma": "~0.12.17",
     "karma-jasmine": "~0.2.2",
     "karma-phantomjs-launcher": "~0.1.4",
-    "karma": "~0.12.16",
-    "karma-spec-reporter": "0.0.12",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-karma": "0.8.3",
-    "grunt-strip-code": "^0.1.2"
+    "karma-spec-reporter": "0.0.13",
+    "load-grunt-tasks": "^0.6.0"
   }
 }
