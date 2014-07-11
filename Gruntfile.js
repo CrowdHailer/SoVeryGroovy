@@ -31,8 +31,38 @@ module.exports = function(grunt) {
       unit: {
         configFile: 'karma.conf.js'
       }
-    }
+    },
+
+    connect: {
+      options: {
+        hostname: 'localhost'
+      },
+      test: {
+        options:{
+          open: false,
+          port: 9001,
+          middleware: function(connect) {
+            return [
+              // connect.static('.tmp'),
+              connect.static('test'),
+              connect().use('/bower_components', connect.static('./bower_components')),
+              connect.static('src')
+            ];
+          }
+        }
+      }
+    },
+
+    mocha: {
+      all: {
+        options: {
+          run: true,
+          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+        }
+      }
+    },
   });
 
   grunt.registerTask('default', ['karma', 'concat', 'uglify']);
+  grunt.registerTask('test', ['connect:test', 'mocha']);
 };
