@@ -68,8 +68,19 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    localtunnel: {
+      debug: {
+        options: {
+          port: 9000,
+          subdomain: 'svgroovy',
+          keepalive: true
+        }
+      }
+    }
   });
 
   grunt.registerTask('default', ['karma', 'concat', 'uglify']);
   grunt.registerTask('test', ['connect:test', 'mocha']);
+  grunt.registerTask('sandpit', ['connect:demo', 'localtunnel:debug']);
 };
