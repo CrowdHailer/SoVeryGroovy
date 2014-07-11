@@ -46,16 +46,6 @@
                 expect(pt.y).to.equal(5);
             });
 
-            xit('should be imutable', function(){
-              pt = Pt(2, 3);
-              console.log(Object.isFrozen(pt));
-              pt.x = 5;
-              console.log(pt);
-              pt.y = 6;
-              expect(pt.x).to.equal(2);
-              expect(pt.y).to.equal(3);
-            });
-
             it('should default to the origin point', function(){
                 var pt = Pt();
                 expect(pt.x).to.equal(0);
@@ -74,35 +64,30 @@
                 p3 = Pt.add(p1)(p2);
                 expect(p3.x).to.equal(6);
                 expect(p3.y).to.equal(8);
-                expect(Object.isFrozen(p3)).to.equal(true);
             });
 
             it('should be able to subtract points', function(){
                 p3 = Pt.subtract(p1)(p2);
                 expect(p3.x).to.equal(-2);
                 expect(p3.y).to.equal(-2);
-                expect(Object.isFrozen(p3)).to.equal(true);
             });
 
             it('should be able to multiply by a scalar', function(){
                 p3 = Pt.scalar(3)(p1);
                 expect(p3.x).to.equal(6);
                 expect(p3.y).to.equal(9);
-                expect(Object.isFrozen(p3)).to.equal(true);
             });
 
             it('should be able to multiply decimal scalar', function(){
                 p3 = Pt.scalar(0.5)(p1);
                 expect(p3.x).to.equal(1);
                 expect(p3.y).to.equal(1.5);
-                expect(Object.isFrozen(p3)).to.equal(true);
             });
 
             it('should be able to negate a point', function(){
                 p3 = Pt.negate(p1)();
                 expect(p3.x).to.equal(-2);
                 expect(p3.y).to.equal(-3);
-                expect(Object.isFrozen(p3)).to.equal(true);
             });
         });
 
@@ -114,7 +99,6 @@
                 p3 = Pt.min(p1)(p2);
                 expect(p3.x).to.equal(2);
                 expect(p3.y).to.equal(3);
-                expect(Object.isFrozen(p3)).to.equal(true);
             });
 
             it('should calculate BBox max', function(){
@@ -123,7 +107,6 @@
                 p3 = Pt.max(p1)(p2);
                 expect(p3.x).to.equal(4);
                 expect(p3.y).to.equal(5);
-                expect(Object.isFrozen(p3)).to.equal(true);
             });
         });
 
@@ -140,7 +123,6 @@
                 qt = Pt.matrixTransform(m)(pt);
                 expect(qt.x).to.equal(4);
                 expect(qt.y).to.equal(6);
-                expect(Object.isFrozen(qt)).to.equal(true);
             });
 
             it('should rotate by matrix', function(){
@@ -149,7 +131,6 @@
                 qt = Pt.matrixTransform(m)(pt);
                 expect(qt.x).to.equal(-3);
                 expect(qt.y).to.equal(2);
-                expect(Object.isFrozen(qt)).to.equal(true);
             });
 
             it('should translate by matrix', function(){
@@ -158,7 +139,6 @@
                 qt = Pt.matrixTransform(m)(pt);
                 expect(qt.x).to.equal(12);
                 expect(qt.y).to.equal(23);
-                expect(Object.isFrozen(qt)).to.equal(true);
             });
         });
     });

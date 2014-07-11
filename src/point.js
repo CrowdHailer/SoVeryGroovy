@@ -16,7 +16,7 @@
     var tmp = darkSVG.createSVGPoint();
     tmp.x = x || 0;
     tmp.y = y || 0;
-    return Object.freeze(tmp);
+    return tmp;
   }
 
   function createFromCoordinate(point){
@@ -74,7 +74,7 @@
 
   function matrixTransform(m){
     return function(q){
-      return Object.freeze(q.matrixTransform(m));
+      return q.matrixTransform(m);
     };
   }
 

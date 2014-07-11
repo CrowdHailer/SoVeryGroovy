@@ -88,7 +88,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['karma', 'concat', 'uglify']);
+  grunt.registerTask('default', ['test', 'concat', 'uglify']);
   grunt.registerTask('test', ['connect:test', 'mocha']);
   grunt.registerTask('deviceTest', ['connect:test', 'localtunnel:test']);
   grunt.registerTask('sandpit', ['connect:demo', 'localtunnel:debug']);
