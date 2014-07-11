@@ -63,6 +63,7 @@ module.exports = function(grunt) {
     mocha: {
       all: {
         options: {
+          reporter: 'Spec',
           run: true,
           urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
         }
